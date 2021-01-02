@@ -130,4 +130,17 @@ public class PersonMethods {
             }
         }
     }
+    public static void ViewByCity() throws IOException
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter name:");
+        String city1=sc.nextLine();
+        for(Person per : person)
+        {
+            if(city1.equals(per.city))
+            {
+                System.out.println(per.toString());
+            }
+        }
+    }
 }

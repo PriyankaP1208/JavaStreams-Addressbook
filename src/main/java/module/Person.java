@@ -1,5 +1,7 @@
 package module;
 
+import java.util.Comparator;
+
 public class Person {
     public String fname, lname, address, city, state, zip, phno;
     public String getFirstName()
@@ -58,6 +60,13 @@ public class Person {
     {
         this.phno=phno;
     }
+    public static Comparator<Person> PerCityComparator = new Comparator<Person>() {
+
+        public int compare(Person s1, Person s2) {
+            String CityName1 = s1.getCity().toUpperCase();
+            String CityName2 = s2.getCity().toUpperCase();
+            return CityName1.compareTo(CityName2);
+        }};
     public String toString() {
         return "FirstName=" +fname + "\n"+
                 "LastName=" + lname+ "\n"+
