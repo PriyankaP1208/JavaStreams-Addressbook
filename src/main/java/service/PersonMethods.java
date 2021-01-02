@@ -117,4 +117,17 @@ public class PersonMethods {
         }
         return name;
     }
+    public static void SearchByName() throws IOException
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter name:");
+        String name=sc.nextLine();
+        for(Person per : person)
+        {
+            if(name.equals(per.fname))
+            {
+                System.out.println(per.toString());
+            }
+        }
+    }
 }
