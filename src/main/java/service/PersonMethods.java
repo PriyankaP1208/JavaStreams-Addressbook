@@ -143,4 +143,11 @@ public class PersonMethods {
             }
         }
     }
+    public static void GetCountByCity() throws IOException
+    {
+        String city;
+        System.out.println("Enter city name:");
+        city=s.nextLine();
+        int count=(int)person.stream().filter(person1->city.equals(person1.getCity())).count();
+    }
 }
