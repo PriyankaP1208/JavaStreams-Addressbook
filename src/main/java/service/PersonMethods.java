@@ -157,4 +157,9 @@ public class PersonMethods {
         List<Person> listName=person.stream().sorted((e1, e2)->e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toList());
         System.out.println("Sorted Contacts:"+listName);
     }
+    public static void SortByCity() throws IOException
+    {
+        List<Person> listCity=person.stream().sorted((e1, e2)->e1.getCity().compareTo(e2.getCity())).collect(Collectors.toList());
+        System.out.println("Sorted Contacts:"+listCity);
+    }
 }
