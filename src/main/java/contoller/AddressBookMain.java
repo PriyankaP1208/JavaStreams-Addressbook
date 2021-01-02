@@ -19,7 +19,7 @@ public class AddressBookMain {
         {
             System.out.println("1.Create \n 2.Add new person \n 3.Edit contact \n"
                     + "4.Delete Contact \n 5.Add multiple contacts \n 6.Display \n 7.Search person by name" +
-                    "\n 8.View By City \n 9.Get count by City");
+                    "\n 8.View By City \n 9.Get count by City \n 10.Sort by Name");
             System.out.println("Enter your choice:");
             Scanner s1 = new Scanner(System.in);
             choice = s1.nextInt();
@@ -59,6 +59,9 @@ public class AddressBookMain {
                     break;
                 case 9:
                     personMethod.GetCountByCity();
+                    break;
+                case 10:
+                    personMethod.SortByName();
                     break;
             }
         }

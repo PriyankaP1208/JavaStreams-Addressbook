@@ -5,7 +5,9 @@ import module.Person;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class PersonMethods {
     static Scanner s=new Scanner(System.in);
@@ -149,5 +151,10 @@ public class PersonMethods {
         System.out.println("Enter city name:");
         city=s.nextLine();
         int count=(int)person.stream().filter(person1->city.equals(person1.getCity())).count();
+    }
+    public static void SortByName() throws IOException
+    {
+        List<Person> listName=person.stream().sorted((e1, e2)->e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toList());
+        System.out.println("Sorted Contacts:"+listName);
     }
 }
